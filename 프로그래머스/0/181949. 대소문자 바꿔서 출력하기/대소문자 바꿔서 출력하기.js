@@ -4,14 +4,12 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+let input = [];
+
 rl.on('line', function (line) {
-    let str = '';
-    line.split('').forEach(item => {
-        if (item == item.toUpperCase()) {
-            str += item.toLowerCase()
-        } else {
-            str += item.toUpperCase()
-        }
-    })
+    input = [...line];
+}).on('close',function(){
+    const rgx = /[A-Z]/;
+    str = input.map(s => rgx.test(s) ? s.toLowerCase() : s.toUpperCase()).join('');
     console.log(str)
-})
+});
