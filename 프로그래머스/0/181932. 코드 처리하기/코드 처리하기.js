@@ -1,3 +1,6 @@
+/*
+ * 어려웠던 문제 + 다른 사람의 풀이 체크해보기
+ */
 function solution(code) {
     var answer = '';
     let mode = 0;
