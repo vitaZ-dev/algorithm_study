@@ -5,5 +5,5 @@ function solution(num_list) {
         if (item % 2 === 0) even += item;
         else odd += item;
     })
-    return Number(odd) + Number(even);
+    return (+odd) + (+even);
 }
