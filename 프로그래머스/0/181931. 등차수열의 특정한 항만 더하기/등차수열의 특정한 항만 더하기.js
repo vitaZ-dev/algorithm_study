@@ -3,11 +3,8 @@
  */
 function solution(a, d, included) {
     var answer = 0;
-    let result = 0;
-    answer = included.map((tf, idx) => ({ tf, idx })).filter((item, idx) => item.tf)
-    answer.forEach(num => {
-        result += a + d*(num.idx)
+    included.forEach((num, idx) => {
+        if (num) answer += (a + d*idx)
     })
-    return result;
+    return answer;
 }
-// sn = a + (n-1)*d
