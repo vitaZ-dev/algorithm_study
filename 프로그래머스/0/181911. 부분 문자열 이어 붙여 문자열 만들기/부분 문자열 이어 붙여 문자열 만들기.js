@@ -1,6 +1,5 @@
 function solution(my_strings, parts) {
-    return my_strings.map((str, idx) => {
-        const [s, e] = parts[idx];
-        return str.slice(s, e+1)
+    return parts.map(([s, e], i) => {
+        return my_strings[i].slice(s, e+1)
     }).join('')
 }
