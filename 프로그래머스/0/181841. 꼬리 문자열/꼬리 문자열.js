@@ -1,4 +1,9 @@
 function solution(str_list, ex) {
+    return str_list.reduce((a, c) => {
+        if (c.includes(ex)) return a;
+        return a + c
+    }, "");
+    /*
     var answer = '';
     str_list.forEach(str => {
         if (!str.includes(ex)) {
@@ -6,4 +11,5 @@ function solution(str_list, ex) {
         }
     })
     return answer;
+    */
 }
