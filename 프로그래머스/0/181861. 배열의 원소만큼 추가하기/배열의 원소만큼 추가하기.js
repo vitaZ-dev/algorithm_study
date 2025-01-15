@@ -1,3 +1,3 @@
 function solution(arr) {
-    return arr.flatMap((a) => Array(a).fill(a));
+    return arr.reduce((a, c) => a.concat(Array(c).fill(c)), []);
 }
