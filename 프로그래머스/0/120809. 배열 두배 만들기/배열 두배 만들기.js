@@ -1,3 +1,4 @@
 function solution(numbers) {
-    return numbers.map(num => num*2);
+    return numbers.reduce((a, c) => [...a, c*2], []);
+    // return numbers.map(num => num*2);
 }
