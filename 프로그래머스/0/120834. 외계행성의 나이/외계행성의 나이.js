@@ -1,3 +1,3 @@
 function solution(age) {
-    return [...age+''].map(a => String.fromCharCode(+a + 97)).join('');
+    return [...age+''].map(a => "abcdefghij"[a]).join('');
 }
