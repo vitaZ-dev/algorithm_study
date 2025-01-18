@@ -1,3 +1,5 @@
 function solution(box, n) {
-    return box.reduce((a, c) => a * Math.trunc(c / n), 1);
+    const [x, y, z] = box;
+
+    return Math.floor(x / n) * Math.floor(y / n) * Math.floor(z / n);
 }
