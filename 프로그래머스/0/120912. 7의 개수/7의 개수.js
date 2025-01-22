@@ -1,7 +1,3 @@
 function solution(array) {
-    let answer = 0;
-    array.forEach(a => {
-        answer += a.toString().split('7').length - 1
-    })
-    return answer;
+    return array.reduce((a, c) => a + c.toString().split('7').length - 1 , 0);
 }
