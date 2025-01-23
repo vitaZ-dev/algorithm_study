@@ -1,9 +1,8 @@
 function solution(n) {
-    let answer = 0;
-    function cal(num) {
-        answer++;
-        return num % 6 === 0 ? answer : cal(num + n);
+    let answer = 6;
+    while (true) {
+        if (answer % n === 0) break;
+        answer += 6;
     }
-    return cal(n) * n / 6;
+    return answer / 6;
 }
-// n과6의 최소공배수
