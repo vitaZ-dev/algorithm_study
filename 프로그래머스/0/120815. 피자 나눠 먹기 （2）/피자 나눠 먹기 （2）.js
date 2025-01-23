@@ -1,8 +1,7 @@
 function solution(n) {
-    let answer = 6;
-    while (true) {
-        if (answer % n === 0) break;
-        answer += 6;
+    let answer = 1;
+    while (answer * 6 % n) {
+        answer++;
     }
-    return answer / 6;
+    return answer;
 }
