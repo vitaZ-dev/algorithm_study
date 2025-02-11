@@ -1,11 +1,7 @@
 function solution(arr, k) {
-    const answer = [...new Set(arr)];
-    const LENGTH = answer.length;
-    if (LENGTH >= k) answer.length = k;
-    else {
-        for(let i = 0; i < k - LENGTH; i++) {
-            answer.push(-1);
-        }
+    const answer = [...new Set(arr)].slice(0, k);
+    if (answer.length !== k) {
+        return [...answer, ...Array(k - answer.length).fill(-1)];
     }
     return answer;
 }
