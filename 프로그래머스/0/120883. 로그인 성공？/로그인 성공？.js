@@ -1,6 +1,4 @@
-function solution([id, pw], db) {
-    const [idCheck] = db.filter(d => d[0] === id);
-    if (!idCheck) return "fail";
-    if (idCheck[1] !== pw) return "wrong pw";
-    return "login";
+function solution([id, pw], database) {
+    const db = new Map(database);
+    return db.has(id) ? db.get(id) === pw ? 'login' : 'wrong pw' : 'fail';
 }
