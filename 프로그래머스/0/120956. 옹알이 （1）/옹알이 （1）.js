@@ -1,8 +1,10 @@
 function solution(babbling) {
-    const pa = ["aya", "ye", "woo", "ma"];
-    return babbling.map(item => {
-        let res = item;
-        pa.forEach(p => res = res.replace(p, '!'));
-        return res;
-    }).filter(a => a.replaceAll('!', '') === '').length;
+    let answer = 0;
+    const regex = /^(aya|ye|woo|ma)+$/;
+    
+    babbling.forEach(word => {
+        if (regex.test(word)) answer++;
+    });
+    
+    return answer;
 }
