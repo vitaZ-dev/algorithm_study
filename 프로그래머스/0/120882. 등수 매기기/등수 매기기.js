@@ -1,4 +1,7 @@
 function solution(score) {
-    const check = score.map(([a, b]) => a+b).sort((x,y) => y-x);
-    return score.map(([x,y]) => check.indexOf(x+y) + 1);
+  return score.map(([x, y]) => {
+    return (
+      score.filter(([a, b]) => (a + b) / 2 > (x + y) / 2).length + 1
+    );
+  });
 }
