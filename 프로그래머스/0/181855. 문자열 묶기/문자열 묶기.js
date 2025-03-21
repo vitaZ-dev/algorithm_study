@@ -6,5 +6,5 @@ function solution(strArr) {
         }
         else answer[item.length] = 1;
     })
-    return Object.values(answer).sort((x, y) => y - x)[0];
+    return Math.max(...Object.values(answer));
 }
